@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  color: white;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Barra de pesquisa */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.search-form input {
+  width: 400px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: #cbd5e1;
+}
+
+.search-form button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Grid */
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 18px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form input {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
