@@ -1,0 +1,19 @@
+.gif-grid {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.gif-item {
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.15);
+}
+
+.gif-item img {
+  width: 100%;
+}
